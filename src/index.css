@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #021926;
+  --secondary: #002e3c;
+  --tertiary: #013747;
+  --accent: #ff7a01;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: url('https://www.toptal.com/designers/subtlepatterns/uploads/papyrus-dark.png') repeat;
+}
+
+
+.dimWhite__filter {
+  filter: invert(100%) sepia(5%) saturate(0%) hue-rotate(230deg) brightness(103%) contrast(107%) opacity(60%);
+}
+.accent__filter {
+  filter: invert(65%) sepia(80%) saturate(4491%) hue-rotate(359deg) brightness(102%) contrast(106%);
+}
+
+.bg-primary__gradient {
+  background: rgb(1,26,40);
+background: radial-gradient(circle, rgba(1,26,40,0.75) 0%, rgba(2,26,38,0.75) 61%, rgba(4,22,38,0.75) 100%);
+}
+
+.bg-secondary__alpha {
+  background: rgba(0,46,60,0.45);
+}
+
+.bg-secondary__gradient {
+  background: rgb(1,26,40);
+  background: radial-gradient(circle, rgba(1,26,40,0.7) 0%, rgba(2,26,38,0.7) 61%, rgba(4,22,38,0.7) 100%);
+}
+
+.half-border-top {
+  border-top: 13px solid;
+  border-image: linear-gradient(to right, theme('colors.secondary') 40%, transparent 40%) 40% 1;
+  border-left: 13px solid;
+}
+
+.secondary-gradient-bg {
+  background: linear-gradient(to bottom, theme('colors.secondary') 0%, theme('colors.primary') 100%);
+}
+
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(20vw, 20vw));
+  grid-template-rows: repeat(3, minmax(20vw, 20vw));
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+.gridContainer > div {
+  
+  border: 8px solid var(--tertiary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gridContainer div.grey img{
+  filter: grayscale(0.99);
+}
+
+.custom-grid-image {
+  object-fit: cover;
+  object-position: 20% 10%;
+}
